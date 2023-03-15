@@ -1,8 +1,5 @@
 import { useState } from "react";
-//import {format} from 'date-fns'
 import "./styles.css";
-
-//import iconelixeira from "./assets/iconelixeira";
 
 function App(){
 
@@ -21,8 +18,6 @@ function App(){
     if(tituloInput === "" || categoria ==="" || date === "" || descricao ===""){//validação via alert
 
      alert("Preencha todos os campos!!");
-     function informa(){
-     }
      return;
     }
     
@@ -36,6 +31,7 @@ function App(){
         descricao: descricao
       },
     ]);
+    setId("");
     setTituloInput("");
     setCategoria("");
     setDate("");
@@ -60,7 +56,6 @@ function App(){
     setListaTarefas(copiaListaTarefas);
   }
 
-
   function excluirTarefa(id){
     if(confirm("Excluir tarefa?")){
       const resposta = listaTarefas.filter((item) => item.id !== id);
@@ -74,6 +69,8 @@ function App(){
     setCategoria(item.categoria);
     setDate(item.date);
     setDescricao(item.descricao);
+    setId(item.id); //ativo o formulario fica preenchido, comentado ele ao invés de editar inclui
+
   }
 
   return(
@@ -139,13 +136,9 @@ function App(){
         ):(
           <p>Parabéns! Concluiu todas suas tarefas!</p>
         )}
-        </div>       
-        
+        </div>
       </div>
     </div>
   )
-
-  
 }
-
 export default App;
