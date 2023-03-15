@@ -14,21 +14,14 @@ function App(){
   const [descricao, setDescricao] = useState("");
 
   const [listaTarefas, setListaTarefas] = useState([]);//manipular post formulario
-  //testes de console log
-  //console.log({descricao})
-  //console.log({date});
-  //console.log({tituloInput})
-  //console.log({categoria})
+
   function adicionaTarefas(event){
     event.preventDefault();
     
-    if(tituloInput === "" || categoria ==="" || date === "" || descricao ===""){
-      //function informeCampo(){
-     //   <p>informe os campos</p>
-     // }
+    if(tituloInput === "" || categoria ==="" || date === "" || descricao ===""){//validação via alert
+
      alert("Preencha todos os campos!!");
      function informa(){
-      <>Preencher o titulo</>
      }
      return;
     }
@@ -56,9 +49,9 @@ function App(){
     const copiaListaTarefas = [...listaTarefas];
 
     const index = copiaListaTarefas.findIndex(
-      (tarefa)=>tarefa.id === id
+      (tarefa) => tarefa.id === id
     );
-    
+
     copiaListaTarefas[index].tituloInput = tituloInput;
     copiaListaTarefas[index].categoria = categoria;
     copiaListaTarefas[index].date = date;
@@ -66,6 +59,7 @@ function App(){
 
     setListaTarefas(copiaListaTarefas);
   }
+
 
   function excluirTarefa(id){
     if(confirm("Excluir tarefa?")){
@@ -75,6 +69,7 @@ function App(){
     }
   }
   function mudaCard(item){
+
     setTituloInput(item.tituloInput);
     setCategoria(item.categoria);
     setDate(item.date);
@@ -91,11 +86,12 @@ function App(){
               <input type="text" 
               value={tituloInput}
               onChange={(event) => setTituloInput(event.target.value)}
+              placeholder="Titulo"
               />
 
               <select
                 value={categoria}
-                onChange={(event) => setCategoria(event.target.value)}
+                onChange={(event) => setCategoria(event.target.value)}                
               >
                 <option value="" disabled >Categoria</option>
                 <option value="Trabalho">Trabalho</option>
@@ -103,21 +99,20 @@ function App(){
                 <option value="Prioridade">Prioridade</option>
                 <option value="Outros">Outros</option>
               </select>
-              <br />
               <input type="date"
                 value={date}
                 onChange={(event) => setDate(event.target.value)}
-                pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+                pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"                
               />
-              <br />
               <textarea name="Descricao"
-                style={{resize: "none"}}
+                
                 id="form-descricao"
                 value={descricao}
+                placeholder="Descrição"
                 onChange={(event) => setDescricao(event.target.value)}
                 ></textarea>
-              <br />
               <input className="save" type="submit"  value={id ? "Salvar" : "Cadastrar"}/>
+              
           </form>
         </div> 
       </div>

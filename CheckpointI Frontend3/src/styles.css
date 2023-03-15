@@ -16,22 +16,23 @@
     flex-direction: row;
     background: #102766;
     align-items: center;
-    text-align: center;    
+    text-align: center; 
     padding: 10px;
+  }
+
+  input, textarea, select{
+    margin-top: 10px;
   }
 
   #formulario-interno{
     display: flex;
     flex-direction: column;
-    width: 343px;
-    height: 568px;
     left: 69px;
     top: 275px;
-    padding: 30px;
+    padding: 10px;
     background: #FFFFFF;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
-    padding: 12px;    
 }
 
 form{
@@ -42,7 +43,8 @@ form{
   font-family: 'Poppins';
   font-size: 40px;
   font-style: normal;
-  font-weight: 400;    
+  font-weight: 400;   
+  width: 343px;
 }
 
 #lista{
@@ -94,6 +96,8 @@ form{
   border: 1px solid #C7C4C4;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
+
+  margin-top: 22px;
 }
 
 #titulo-card{
