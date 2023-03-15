@@ -54,6 +54,12 @@ function App(){
     copiaListaTarefas[index].descricao = descricao;
 
     setListaTarefas(copiaListaTarefas);
+
+    setId("");
+    setTituloInput("");
+    setCategoria("");
+    setDate("");
+    setDescricao("");
   }
 
   function excluirTarefa(id){
@@ -69,7 +75,7 @@ function App(){
     setCategoria(item.categoria);
     setDate(item.date);
     setDescricao(item.descricao);
-    setId(item.id); //ativo o formulario fica preenchido, comentado ele ao invés de editar inclui
+    setId(item.id);
 
   }
 
