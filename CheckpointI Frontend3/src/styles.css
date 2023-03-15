@@ -2,20 +2,142 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /*border: 1px solid red;*/
   }
   
  #main {
-    /* background: #aaaaaa; */
+    height: 100vw;
     height: 100vh;
-
-  }
-  
-
-  #formulario {
-    background-color: rgb(41, 41, 150);
+    display: flex;
   }
 
   #formulario-dentro{
-    float: left;
-    padding-right: 50px;
+    display: flex;
+    flex-direction: row;
+    background: #102766;
+    align-items: center;
+    text-align: center;    
+    padding: 10px;
   }
+
+  #formulario-interno{
+    display: flex;
+    flex-direction: column;
+    width: 343px;
+    height: 568px;
+    left: 69px;
+    top: 275px;
+    padding: 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    padding: 12px;    
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  color: #545454;
+  font-family: 'Poppins';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;    
+}
+
+#lista{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    top: 10px;
+    background: #FFFFFF;
+    border: 1px solid #C7C4C4;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    padding: 10px;
+
+}
+
+#form-descricao{
+  width: 100%;
+  height: 23px;
+  left: 104px;
+  top: 630px;
+  content: '';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #545454;
+
+  border: 1px solid #450B53;
+  transform: rotate(-0.21deg);
+}
+
+.save{  
+  background: #E84118;
+  width: 287px;
+  height: 52px;
+  left: 97px;
+  top: 734px;  
+  border-radius: 8px;
+}
+
+#select-categorias{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  left: 529px;
+  top: 129px;
+
+  background: #FFFFFF;
+  border: 1px solid #C7C4C4;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+
+#titulo-card{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #343434;
+}
+
+#categoria-card{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  color: #343434;
+}
+
+#data-card{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #343434;
+}
+
+#descricao-card{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #343434;
+}
+
+#contador-tarefas{
+  text-align: right;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #343434;
+}
