@@ -134,8 +134,10 @@ function App(){
               <p id="categoria-card">{item.categoria}</p>
               <p id="data-card">{item.date}</p>
               <p id="descricao-card">{item.descricao}</p>
-              <img src="https://img.icons8.com/external-becris-lineal-becris/256/external-edit-mintab-for-ios-becris-lineal-becris.png" alt="editar" width='20px'   onClick={()=>mudaCard(item)}/>
-              <img src="https://img.icons8.com/ios/256/delete.png" alt="apagar" width='20px' onClick={()=>{excluirTarefa(item.id)}}/>
+              <div id="image">
+                <img src="https://img.icons8.com/external-becris-lineal-becris/256/external-edit-mintab-for-ios-becris-lineal-becris.png" alt="editar" width='20px'   onClick={()=>mudaCard(item)}/>
+                <img src="https://img.icons8.com/ios/256/delete.png" alt="apagar" width='20px' onClick={()=>{excluirTarefa(item.id)}}/>
+              </div>
             </div>
           ))}
           </ul>
